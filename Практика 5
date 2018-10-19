@@ -1,33 +1,22 @@
+   Задание №2                                  
+                                                            
                                                             Main.java
                                                             
- public class Main {
-    public static void printRecursive(int n){
-        printRecursive(0, n);
-    }
+import java.util.Scanner;
 
-    public static void printRecursive(int i, int n){
-        if(i >= n)
-            return;
-        System.out.print(n + " ");
-        printRecursive(i + 1, n);
-    }
+public class Main {
 
-    public static void recursion(int n) {
-        recursion(0, n);
-    }
-
-    public static void recursion(int i, int n){
-        if(i > n)
-            return;
-        printRecursive(i);
-        System.out.print('\n');
-        recursion(i + 1, n);
+    static int Recursion (int n)
+    {
+        for (int i = 1; i <= n; i++)
+            System.out.println(i);
+        return 0;
     }
 
     public static void main(String[] args) {
-        if(args.length > 0){
-            recursion(Integer.parseInt(args[0]));
-        }
-
+        Scanner ch = new Scanner(System.in);
+        System.out.print("Введите число: ");
+        int num = ch.nextInt();
+        Recursion(num);
     }
 }
